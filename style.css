@@ -22,7 +22,7 @@ body {
 
 .container {
     background: white;
-    width: 450px;
+    width: 650px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -73,5 +73,34 @@ ul li {
     background: #eee;
     margin: 5px 0;
     padding: 10px;
+}
+
+
+
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    gap: 10px;
+}
+
+
+.box {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.income-box {
+    background: green;
+}
+
+
+.expense-box {
+    background: red;
 }
 

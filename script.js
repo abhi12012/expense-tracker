@@ -7,6 +7,11 @@ function tracker() {
 
     const descriptionInput = document.getElementById("description");
     const amountInput = document.getElementById("amount");
+    const isExpense = document.getElementById("isExpense").checked;
+
+
+    const categoryInput = document.getElementById("category");
+const categoryText = categoryInput.value;
 
 
     const descriptionText = descriptionInput.value;
@@ -20,10 +25,11 @@ function tracker() {
 
 
     transactions.push({
-        id: Date.now(),
-        description: descriptionText,
-        amount: Number(amountValue)
-    });
+    id: Date.now(),
+    description: descriptionText,
+    amount: Number(amountValue),
+    type: isExpense ? "expense" : "income"
+});
 
 
     localStorage.setItem("transactions", JSON.stringify(transactions));
@@ -32,10 +38,18 @@ function tracker() {
     renderTransactions();
 
 
+   
     descriptionInput.value = "";
     amountInput.value = "";
+
+
+   
 }
 function renderTransactions() {
+
+
+    let incomeTotal = 0;
+    let expenseTotal = 0;
 
 
     const list = document.getElementById("list");
@@ -50,6 +64,7 @@ function renderTransactions() {
     transactions.forEach(function(item) {
 
 
+       
         const li = document.createElement("li");
         li.textContent = item.description + " - ₹" + item.amount;
 
@@ -93,13 +108,26 @@ function renderTransactions() {
         });
 
 
+       
         li.appendChild(editBtn);
         li.appendChild(deleteBtn);
         list.appendChild(li);
 
 
-        balance += item.amount;
+        if (item.type === "income") {
+    balance += item.amount;
+    incomeTotal += item.amount;
+} else {
+    balance -= item.amount;
+    expenseTotal += item.amount;
+}
     });
+
+
+    document.getElementById("income").textContent = incomeTotal;
+        document.getElementById("expense").textContent = expenseTotal;
+
+
 
 
     balanceElement.textContent = "Balance: ₹" + balance;
@@ -119,4 +147,5 @@ window.onload = function() {
 
     renderTransactions();
 };
+
 

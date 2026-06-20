@@ -2,45 +2,48 @@
 
 My first JavaScript project.
 
-A simple Expense Tracker application built using HTML, CSS, and JavaScript to manage daily income and expenses.
-
----
+This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 
 ## Features
 
 ### Transaction Management
 
-* Add expenses
+* Add income transactions
+* Add expense transactions
 * View transaction list
 * Edit transactions
 * Delete transactions
+* Select transaction type (Income / Expense)
 
-### Financial Tracking
+### Financial Summary
 
 * Transaction counter
+* Income summary
+* Expense summary
 * Automatic balance calculation
+* Improved expense tracking overview
 
-### Data Validation
-
-* Input validation
-* Prevents duplicate transaction descriptions
-
-### Local Storage Support
+### Data Management
 
 * Data saved using Local Storage
 * Transactions remain after page refresh
-* Automatically restores saved transactions on page load
 * Deleted transactions are removed from Local Storage
+* Automatically restores saved transactions on page load
+* Prevents duplicate transaction descriptions
 
----
+### New Update
+
+* Added Income Summary Box
+* Added Expense Summary Box
+* Added Income and Expense transaction type selection
+* Improved transaction categorization
+* Improved financial overview
 
 ## Technologies Used
 
 * HTML
 * CSS
 * JavaScript
-
----
 
 ## Future Updates
 
@@ -50,8 +53,6 @@ A simple Expense Tracker application built using HTML, CSS, and JavaScript to ma
 * Charts & Analytics
 * Export CSV
 * Search Transactions
-
----
 
 ## Author
 
