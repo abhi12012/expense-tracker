@@ -62,6 +62,15 @@ counterElement.textContent =
     balanceElement.textContent = "Balance: ₹" + balance;
 
 
+
+
+    transactionCount--;
+
+
+    counterElement.textContent =
+    "Transactions: " + transactionCount;
+
+
     li.remove();
 
 
@@ -73,7 +82,5 @@ counterElement.textContent =
 
 
 }
-
-
 
 
