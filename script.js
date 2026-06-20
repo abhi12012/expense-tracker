@@ -69,6 +69,21 @@ function renderTransactions() {
         deleteBtn.textContent = "❌";
 
 
+
+
+        const editBtn = document.createElement("button");
+editBtn.textContent = "✏️";
+
+
+editBtn.addEventListener("click", function() {
+
+
+    console.log(item);
+
+
+});
+
+
         deleteBtn.addEventListener("click", function() {
 
 
@@ -94,8 +109,7 @@ function renderTransactions() {
 
 
         });
-
-
+        li.appendChild(editBtn);
         li.appendChild(deleteBtn);
         list.appendChild(li);
 
@@ -131,4 +145,5 @@ window.onload = function() {
 
     renderTransactions();
 };
+
 
