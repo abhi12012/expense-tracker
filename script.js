@@ -63,6 +63,12 @@ function renderTransactions() {
     const chartArea = document.getElementById("chartArea");
 
 
+   
+
+
+   
+
+
     const categoryFilterValue =
     document.getElementById("categoryFilter").value;
     console.log(categoryFilterValue);
@@ -264,6 +270,26 @@ uniqueCategories.forEach(function(category) {
 
 
 
+const summaryArea =
+document.getElementById("summaryArea");
+
+
+summaryArea.innerHTML =
+"<h3>Category Summary</h3>";
+
+
+for (let category in categoryTotals) {
+
+
+    summaryArea.innerHTML +=
+    `<p>${category}: ₹${categoryTotals[category]}</p>`;
+
+
+}
+
+
+
+
     balanceElement.textContent = "Balance: ₹" + balance;
     counterElement.textContent = "Transactions: " + filteredTransactions.length;
 }
@@ -297,6 +323,4 @@ window.onload = function() {
 
     renderTransactions();
 };
-
-
 

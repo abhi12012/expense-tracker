@@ -1,4 +1,6 @@
-* Category-based filtering
+Markdown
+
+* Category-wise transaction summary
 
 # Expense Tracker
 
@@ -25,8 +27,7 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 * Prevents duplicate transaction descriptions
 * Category-based transaction organization
 
-
-
+Markdown
 ## New Update
 
 * Added transaction filtering system
@@ -34,9 +35,10 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 * Added Income Transactions filter
 * Added Expense Transactions filter
 * Added Category Filter
-* View transactions by selected category
-* Improved transaction organization
-* Easier transaction tracking and management
+* Added Category Summary
+* View total transactions by category
+* Better expense analysis by category
+* Improved financial overview
 
 ## Technologies Used
 
@@ -55,4 +57,6 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 ## Author
 
 Abhishek
+
+
 
