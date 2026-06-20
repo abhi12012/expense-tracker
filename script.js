@@ -41,8 +41,7 @@ function tracker() {
     transactionCount++;
 
 
-counterElement.textContent =
-"Transactions: " + transactionCount;
+counterElement.textContent = "Transactions: " + transactionCount;
 
 
    li.appendChild(deleteBtn);
@@ -67,8 +66,7 @@ counterElement.textContent =
     transactionCount--;
 
 
-    counterElement.textContent =
-    "Transactions: " + transactionCount;
+    counterElement.textContent = "Transactions: " + transactionCount;
 
 
     li.remove();
