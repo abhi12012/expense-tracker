@@ -38,6 +38,9 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 * Added Income and Expense transaction type selection
 * Improved transaction categorization
 * Improved financial overview
+* Added Income and Expense transaction type selection
+* Improved transaction categorization
+
 
 ## Technologies Used
 

@@ -28,10 +28,9 @@ const categoryText = categoryInput.value;
     id: Date.now(),
     description: descriptionText,
     amount: Number(amountValue),
-    type: isExpense ? "expense" : "income"
+    type: isExpense ? "expense" : "income",
+    category: categoryText
 });
-
-
     localStorage.setItem("transactions", JSON.stringify(transactions));
 
 
@@ -66,7 +65,10 @@ function renderTransactions() {
 
        
         const li = document.createElement("li");
-        li.textContent = item.description + " - ₹" + item.amount;
+        li.textContent = item.description +
+" - ₹" + item.amount +
+" (" + item.type + ")" +
+" [" + item.category + "]";
 
 
         const deleteBtn = document.createElement("button");
@@ -124,7 +126,7 @@ function renderTransactions() {
     });
 
 
-    document.getElementById("income").textContent = incomeTotal;
+document.getElementById("income").textContent = incomeTotal;
         document.getElementById("expense").textContent = expenseTotal;
 
 
@@ -147,5 +149,4 @@ window.onload = function() {
 
     renderTransactions();
 };
-
 
