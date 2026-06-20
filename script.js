@@ -19,34 +19,11 @@ function tracker() {
     }
 
 
-    if (window.editingId) {
-
-
-        transactions = transactions.map(function(t) {
-            if (t.id === window.editingId) {
-                return {
-                    id: t.id,
-                    description: descriptionText,
-                    amount: Number(amountValue)
-                };
-            }
-            return t;
-        });
-
-
-        window.editingId = null; // reset edit mode
-
-
-    } else {
-
-
-        // 🆕 normal add
-        transactions.push({
-            id: Date.now(),
-            description: descriptionText,
-            amount: Number(amountValue)
-        });
-    }
+    transactions.push({
+        id: Date.now(),
+        description: descriptionText,
+        amount: Number(amountValue)
+    });
 
 
     localStorage.setItem("transactions", JSON.stringify(transactions));
@@ -142,5 +119,4 @@ window.onload = function() {
 
     renderTransactions();
 };
-
 
