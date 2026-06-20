@@ -20,9 +20,11 @@ function tracker() {
 
 
     transactions.push({
+        id: Date.now(),
         description: descriptionText,
         amount: Number(amountValue)
     });
+console.log(transactions);
 
 
     localStorage.setItem(
@@ -73,7 +75,10 @@ function renderTransactions() {
             transactions = transactions.filter(function(t) {
 
 
-                return t.description !== item.description;
+                // return t.description !== item.description;
+
+
+                return t.id !== item.id;
 
 
             });
@@ -126,6 +131,4 @@ window.onload = function() {
 
     renderTransactions();
 };
-
-
 

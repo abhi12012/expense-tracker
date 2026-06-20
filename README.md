@@ -1,3 +1,4 @@
+
 # Expense Tracker
 
 My first JavaScript project.
@@ -5,7 +6,6 @@ My first JavaScript project.
 This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 
 ## Features
-
 
 * Add expenses
 * View transaction list
@@ -18,6 +18,7 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 * Deleted transactions are removed from Local Storage
 * Prevents duplicate transaction descriptions
 * Automatically restores saved transactions on page load
+* Unique transaction identification for reliable data management
 
 
 ## Technologies Used
@@ -27,7 +28,7 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 * JavaScript
 
 ## Future Updates
-
+* in localstorage me
 * Edit transaction
 * Local Storage
 * Categories
@@ -37,4 +38,7 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 ## Author
 
 Abhishek
+
+
+
 
