@@ -1,31 +1,21 @@
-let transactionCount = 0;
 let balance = 0;
-
-
 let transactions = [];
 
 
-
-
 function tracker() {
+
+
     const descriptionInput = document.getElementById("description");
     const amountInput = document.getElementById("amount");
-    const balanceElement = document.getElementById("balance");
-    const counterElement = document.getElementById("counter");
-
-
 
 
     const descriptionText = descriptionInput.value;
     const amountValue = amountInput.value;
 
 
-   
-
-
     if (descriptionText === "" || amountValue === "") {
-    alert("Please fill all fields");
-    return;
+        alert("Please fill all fields");
+        return;
     }
 
 
@@ -35,116 +25,6 @@ function tracker() {
     });
 
 
-    localStorage.setItem("transactions", JSON.stringify(transactions));
-
-
-
-
-   
-
-
-    const li = document.createElement("li");
-    li.textContent = descriptionText + " - ₹" + amountValue;
-
-
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "❌";
-
-
-
-
-    renderTransactions();
-
-
-   li.appendChild(deleteBtn);
-   
-
-
-    const list = document.getElementById("list");
-    list.appendChild(li);
-
-
-   
-    deleteBtn.addEventListener("click", function () {
-   
-
-
-    balance = balance - Number(amountValue);
-    balanceElement.textContent = "Balance: ₹" + balance;
-
-
-
-
-    transactionCount--;
-
-
-    counterElement.textContent = "Transactions: " + transactionCount;
-
-
-    li.remove();
-
-
-});
-
-
-    descriptionInput.value = "";
-    amountInput.value = "";
-
-
-}
-
-
-
-
-function renderTransactions() {
-
-
-    const list = document.getElementById("list");
-    list.innerHTML = "";
-
-
-    balance = 0;
-
-
-    transactions.forEach(item => {
-
-
-       
-
-
-        const li = document.createElement("li");
-        li.textContent = item.description + " - ₹" + item.amount;
-
-
-
-
-        const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "❌";
-
-
-       
-        deleteBtn.addEventListener("click", function() {
-
-
-   
-
-
-
-
-
-
-    deleteBtn.addEventListener("click", function() {
-
-
-    li.remove();
-   
-    transactions = transactions.filter(function(t) {
-
-
-    return t.description !== item.description;
-
-
-});
     localStorage.setItem(
         "transactions",
         JSON.stringify(transactions)
@@ -154,10 +34,63 @@ function renderTransactions() {
     renderTransactions();
 
 
-});
+    descriptionInput.value = "";
+    amountInput.value = "";
+}
 
 
-});
+
+
+function renderTransactions() {
+
+
+    const list = document.getElementById("list");
+    const balanceElement = document.getElementById("balance");
+    const counterElement = document.getElementById("counter");
+
+
+    list.innerHTML = "";
+
+
+    balance = 0;
+
+
+    transactions.forEach(function(item) {
+
+
+        const li = document.createElement("li");
+        li.textContent =
+            item.description + " - ₹" + item.amount;
+
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "❌";
+
+
+        deleteBtn.addEventListener("click", function() {
+
+
+            transactions = transactions.filter(function(t) {
+
+
+                return t.description !== item.description;
+
+
+            });
+
+
+            localStorage.setItem(
+                "transactions",
+                JSON.stringify(transactions)
+            );
+
+
+            renderTransactions();
+
+
+        });
+
+
         li.appendChild(deleteBtn);
         list.appendChild(li);
 
@@ -168,33 +101,22 @@ function renderTransactions() {
     });
 
 
-    const balanceElement = document.getElementById("balance");
-
-
-    balanceElement.textContent = "Balance: ₹" + balance;
-
-
-
-
-
-
-   
-    const counterElement = document.getElementById("counter");
+    balanceElement.textContent =
+        "Balance: ₹" + balance;
 
 
     counterElement.textContent =
-    "Transactions: " + transactions.length;
+        "Transactions: " + transactions.length;
 }
 
 
 
 
+window.onload = function() {
 
 
-window.onload = function () {
-
-
-    const savedData = localStorage.getItem("transactions");
+    const savedData =
+        localStorage.getItem("transactions");
 
 
     if (savedData) {
@@ -202,7 +124,7 @@ window.onload = function () {
     }
 
 
-    renderTransactions(); // 🔥 important
+    renderTransactions();
 };
 
 
