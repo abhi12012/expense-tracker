@@ -201,7 +201,35 @@ transactions.forEach(function(item) {
 });
 
 
-console.log(categoryTotals);
+const categoryFilter = document.getElementById("categoryFilter");
+
+
+categoryFilter.innerHTML =
+'<option value="all">All Categories</option>';
+
+
+const uniqueCategories = [...new Set(
+    transactions.map(item => item.category)
+)];
+
+
+
+
+uniqueCategories.forEach(function(category) {
+
+
+    const option =
+        document.createElement("option");
+
+
+    option.value = category;
+    option.textContent = category;
+
+
+    categoryFilter.appendChild(option);
+
+
+});
 
 
 
@@ -239,4 +267,6 @@ window.onload = function() {
 
     renderTransactions();
 };
+
+
 

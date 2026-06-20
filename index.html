@@ -14,9 +14,16 @@
 
 
         <select id="filter" onchange="renderTransactions()">
+
+
     <option value="all">All</option>
     <option value="income">Income</option>
     <option value="expense">Expense</option>
+</select>
+
+
+<select id="categoryFilter" onchange="renderTransactions()">
+    <option value="all">All Categories</option>
 </select>
 
 
@@ -57,4 +64,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
