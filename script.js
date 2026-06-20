@@ -114,10 +114,37 @@ function renderTransactions() {
 
         const li = document.createElement("li");
         li.textContent = item.description + " - ₹" + item.amount;
-         
-        balance = balance + item.amount;
+
+
+
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "❌";
+
+
        
+        deleteBtn.addEventListener("click", function() {
+
+
+   
+    console.log(item);
+
+
+    deleteBtn.addEventListener("click", function() {
+
+
+    li.remove();
+
+
+});
+
+
+});
+        li.appendChild(deleteBtn);
         list.appendChild(li);
+
+
+        balance = balance + item.amount;
 
 
     });
@@ -157,7 +184,6 @@ window.onload = function () {
     }
 
 
-    renderTransactions(); // 🔥 important
+    renderTransactions(); 
 };
-
 
