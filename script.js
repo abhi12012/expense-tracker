@@ -138,7 +138,22 @@ if (filterValue !== "all") {
 
 
 document.getElementById("income").textContent = incomeTotal;
-        document.getElementById("expense").textContent = expenseTotal;
+document.getElementById("expense").textContent = expenseTotal;
+
+
+const chartData = [
+    {
+        type: "Income",
+        amount: incomeTotal
+    },
+    {
+        type: "Expense",
+        amount: expenseTotal
+    }
+];
+
+
+console.log(chartData);
 
 
 
@@ -146,6 +161,22 @@ document.getElementById("income").textContent = incomeTotal;
     balanceElement.textContent = "Balance: ₹" + balance;
     counterElement.textContent = "Transactions: " + filteredTransactions.length;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 window.onload = function() {
 
 
