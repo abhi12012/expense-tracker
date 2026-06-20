@@ -134,7 +134,18 @@ function renderTransactions() {
 
 
     balanceElement.textContent = "Balance: ₹" + balance;
+
+
+
+
+
+
    
+    const counterElement = document.getElementById("counter");
+
+
+    counterElement.textContent =
+    "Transactions: " + transactions.length;
 }
 
 
@@ -155,3 +166,6 @@ window.onload = function () {
 
     renderTransactions(); // 🔥 important
 };
+
+
+

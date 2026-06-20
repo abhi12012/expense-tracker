@@ -6,15 +6,15 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 
 ## Features
 
-## Features
-
 * Add expenses
 * View transaction list
 * Delete transactions
 * Transaction counter
 * Automatic balance calculation
 * Input validation
-
+* Data saved using Local Storage
+* Transactions remain after page refresh
+* Automatic data loading using window.onload
 
 ## Technologies Used
 
@@ -25,13 +25,12 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 ## Future Updates
 
 * Edit transaction
-* Local Storage
 * Categories
 * Filters
 * Dashboard
+* Charts & Analytics
+* Export CSV
 
 ## Author
 
 Abhishek
-
-
