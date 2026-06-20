@@ -53,14 +53,7 @@ function tracker() {
 
 
 
-    balance = balance + Number(amountValue);
-    balanceElement.textContent = "Balance: ₹" + balance;
-   
-   
-    transactionCount++;
-
-
-counterElement.textContent = "Transactions: " + transactionCount;
+    renderTransactions();
 
 
    li.appendChild(deleteBtn);
@@ -166,6 +159,5 @@ window.onload = function () {
 
     renderTransactions(); // 🔥 important
 };
-
 
 
