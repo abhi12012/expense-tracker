@@ -30,7 +30,8 @@ const categoryText = categoryInput.value;
     description: descriptionText,
     amount: Number(amountValue),
     type: isExpense ? "expense" : "income",
-    category: categoryText
+    category: categoryText,
+    date: dateValue
 });
     localStorage.setItem("transactions", JSON.stringify(transactions));
 
@@ -270,8 +271,7 @@ uniqueCategories.forEach(function(category) {
 
 
 
-const summaryArea =
-document.getElementById("summaryArea");
+const summaryArea = document.getElementById("summaryArea");
 
 
 summaryArea.innerHTML =
@@ -299,8 +299,8 @@ for (let category in categoryTotals) {
 
 
 
-
-
+const dateValue = document.getElementById("date").value;
+console.log(dateValue )
 
 
 
