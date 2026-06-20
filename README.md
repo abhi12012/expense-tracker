@@ -1,3 +1,4 @@
+
 # Expense Tracker
 
 My first JavaScript project.
@@ -6,41 +7,33 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 
 ## Features
 
-### Transaction Management
+## Features
+
 
 * Add income transactions
 * Add expense transactions
 * View transaction list
 * Edit transactions
 * Delete transactions
-* Select transaction type (Income / Expense)
-
-### Financial Summary
-
+* Filter transactions by type (All, Income, Expense)
 * Transaction counter
 * Income summary
 * Expense summary
 * Automatic balance calculation
-* Improved expense tracking overview
-
-### Data Management
-
+* Input validation
 * Data saved using Local Storage
 * Transactions remain after page refresh
 * Deleted transactions are removed from Local Storage
-* Automatically restores saved transactions on page load
 * Prevents duplicate transaction descriptions
+* Category-based transaction organization
 
 ### New Update
 
 * Added Income Summary Box
 * Added Expense Summary Box
-* Added Income and Expense transaction type selection
-* Improved transaction categorization
-* Improved financial overview
-* Added Income and Expense transaction type selection
-* Improved transaction categorization
-
+* Improved expense tracking overview
+  Added Income and Expense transaction type selection
+  Improved transaction categorization
 
 ## Technologies Used
 
@@ -50,13 +43,16 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 
 ## Future Updates
 
+* Edit transaction
+* Local Storage
 * Categories
 * Filters
 * Dashboard
-* Charts & Analytics
-* Export CSV
-* Search Transactions
 
 ## Author
 
 Abhishek
+
+
+
+

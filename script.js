@@ -51,6 +51,9 @@ function renderTransactions() {
     let expenseTotal = 0;
 
 
+   const filterValue = document.getElementById("filter").value;
+
+
     const list = document.getElementById("list");
     const balanceElement = document.getElementById("balance");
     const counterElement = document.getElementById("counter");
@@ -60,7 +63,15 @@ function renderTransactions() {
     balance = 0;
 
 
-    transactions.forEach(function(item) {
+    let filteredTransactions = transactions;
+
+
+if (filterValue !== "all") {
+    filteredTransactions = transactions.filter(item => item.type === filterValue);
+}
+
+
+    filteredTransactions.forEach(function(item) {
 
 
        
@@ -133,7 +144,7 @@ document.getElementById("income").textContent = incomeTotal;
 
 
     balanceElement.textContent = "Balance: ₹" + balance;
-    counterElement.textContent = "Transactions: " + transactions.length;
+    counterElement.textContent = "Transactions: " + filteredTransactions.length;
 }
 window.onload = function() {
 
@@ -149,4 +160,3 @@ window.onload = function() {
 
     renderTransactions();
 };
-
