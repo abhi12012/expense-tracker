@@ -1,5 +1,12 @@
 let transactionCount = 0;
 let balance = 0;
+
+
+let transactions = [];
+
+
+
+
 function tracker() {
     const descriptionInput = document.getElementById("description");
     const amountInput = document.getElementById("amount");
@@ -22,6 +29,18 @@ function tracker() {
     }
 
 
+    transactions.push({
+        description: descriptionText,
+        amount: Number(amountValue)
+    });
+
+
+    localStorage.setItem("transactions", JSON.stringify(transactions));
+
+
+
+
+   
 
 
     const li = document.createElement("li");
@@ -80,5 +99,3 @@ counterElement.textContent = "Transactions: " + transactionCount;
 
 
 }
-
-
