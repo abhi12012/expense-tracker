@@ -63,6 +63,14 @@ function renderTransactions() {
     const chartArea = document.getElementById("chartArea");
 
 
+    const categoryFilterValue =
+    document.getElementById("categoryFilter").value;
+    console.log(categoryFilterValue);
+
+
+
+
+   
     chartArea.innerHTML =
 `
 <h3>Chart Data</h3>
@@ -79,12 +87,34 @@ function renderTransactions() {
     balance = 0;
 
 
-    let filteredTransactions = transactions;
+   
+
+
+let filteredTransactions = transactions;
 
 
 if (filterValue !== "all") {
-    filteredTransactions = transactions.filter(item => item.type === filterValue);
+    filteredTransactions =
+        transactions.filter(
+            item => item.type === filterValue
+        );
 }
+
+
+if (categoryFilterValue !== "all") {
+
+
+    filteredTransactions =
+        filteredTransactions.filter(
+            item => item.category === categoryFilterValue
+        );
+
+
+}
+
+
+
+
 
 
 transactions.forEach(function(item) {
@@ -104,7 +134,7 @@ console.log(500);
        
         const li = document.createElement("li");
         li.textContent = item.description +
-" - ₹" + item.amount +
+        " - ₹" + item.amount +
 " (" + item.type + ")" +
 " [" + item.category + "]";
 
