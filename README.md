@@ -6,11 +6,6 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 
 ## Features
 
-## Features
-
-## Features
-
-## Features
 
 * Add expenses
 * View transaction list
@@ -22,6 +17,7 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 * Transactions remain after page refresh
 * Deleted transactions are removed from Local Storage
 * Prevents duplicate transaction descriptions
+* Automatically restores saved transactions on page load
 
 
 ## Technologies Used
