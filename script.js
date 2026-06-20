@@ -1,8 +1,12 @@
+let transactionCount = 0;
 let balance = 0;
 function tracker() {
     const descriptionInput = document.getElementById("description");
     const amountInput = document.getElementById("amount");
     const balanceElement = document.getElementById("balance");
+    const counterElement = document.getElementById("counter");
+
+
 
 
     const descriptionText = descriptionInput.value;
@@ -34,6 +38,11 @@ function tracker() {
     balanceElement.textContent = "Balance: ₹" + balance;
    
    
+    transactionCount++;
+
+
+counterElement.textContent =
+"Transactions: " + transactionCount;
 
 
    li.appendChild(deleteBtn);
@@ -49,7 +58,6 @@ function tracker() {
    
 
 
-   
     balance = balance - Number(amountValue);
     balanceElement.textContent = "Balance: ₹" + balance;
 
@@ -65,5 +73,7 @@ function tracker() {
 
 
 }
+
+
 
 

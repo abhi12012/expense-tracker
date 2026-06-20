@@ -9,6 +9,9 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 * Add expenses
 * View transaction list
 * Delete transactions
+* Transaction counter
+* Automatic balance calculation
+* Input validation
 
 ## Technologies Used
 
