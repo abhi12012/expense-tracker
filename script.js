@@ -8,6 +8,7 @@ function tracker() {
     const descriptionInput = document.getElementById("description");
     const amountInput = document.getElementById("amount");
     const isExpense = document.getElementById("isExpense").checked;
+   
 
 
     const categoryInput = document.getElementById("category");
@@ -59,6 +60,21 @@ function renderTransactions() {
     const counterElement = document.getElementById("counter");
 
 
+    const chartArea = document.getElementById("chartArea");
+
+
+    chartArea.innerHTML =
+`
+<h3>Chart Data</h3>
+<p>Income: ₹${incomeTotal}</p>
+<p>Expense: ₹${expenseTotal}</p>
+`;
+
+
+
+
+
+
     list.innerHTML = "";
     balance = 0;
 
@@ -69,6 +85,17 @@ function renderTransactions() {
 if (filterValue !== "all") {
     filteredTransactions = transactions.filter(item => item.type === filterValue);
 }
+
+
+transactions.forEach(function(item) {
+
+
+    console.log(
+        item.category,
+        item.amount
+    );
+console.log(500);
+});
 
 
     filteredTransactions.forEach(function(item) {
@@ -100,6 +127,10 @@ if (filterValue !== "all") {
 
             // optional: remove old item for proper update flow
             transactions = transactions.filter(t => t.id !== item.id);
+
+
+
+
 
 
             localStorage.setItem("transactions", JSON.stringify(transactions));
@@ -153,7 +184,24 @@ const chartData = [
 ];
 
 
-console.log(chartData);
+let categoryTotals = {};
+
+
+transactions.forEach(function(item) {
+
+
+    if (!categoryTotals[item.category]) {
+        categoryTotals[item.category] = 0;
+    }
+
+
+    categoryTotals[item.category] += item.amount;
+
+
+});
+
+
+console.log(categoryTotals);
 
 
 
@@ -191,3 +239,4 @@ window.onload = function() {
 
     renderTransactions();
 };
+
