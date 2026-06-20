@@ -21,3 +21,17 @@ This is a simple Expense Tracker built using HTML, CSS and JavaScript.
 * HTML
 * CSS
 * JavaScript
+
+## Future Updates
+
+* Edit transaction
+* Local Storage
+* Categories
+* Filters
+* Dashboard
+
+## Author
+
+Abhishek
+
+

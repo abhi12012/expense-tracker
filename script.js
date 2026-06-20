@@ -99,3 +99,59 @@ counterElement.textContent = "Transactions: " + transactionCount;
 
 
 }
+
+
+
+
+function renderTransactions() {
+
+
+    const list = document.getElementById("list");
+    list.innerHTML = "";
+
+
+    balance = 0;
+
+
+    transactions.forEach(item => {
+
+
+       
+
+
+        const li = document.createElement("li");
+        li.textContent = item.description + " - ₹" + item.amount;
+         
+        balance = balance + item.amount;
+       
+        list.appendChild(li);
+
+
+    });
+
+
+    const balanceElement = document.getElementById("balance");
+
+
+    balanceElement.textContent = "Balance: ₹" + balance;
+   
+}
+
+
+
+
+
+
+window.onload = function () {
+
+
+    const savedData = localStorage.getItem("transactions");
+
+
+    if (savedData) {
+        transactions = JSON.parse(savedData);
+    }
+
+
+    renderTransactions(); // 🔥 important
+};
