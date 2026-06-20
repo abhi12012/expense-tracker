@@ -9,16 +9,13 @@ function tracker() {
     const amountValue = amountInput.value;
 
 
-    console.log(descriptionText);
-    console.log(amountValue);
+   
 
 
     if (descriptionText === "" || amountValue === "") {
     alert("Please fill all fields");
     return;
-    console.log(descriptionText === "");
-    console.log(amountValue === "");
-}
+    }
 
 
 
@@ -27,19 +24,19 @@ function tracker() {
     li.textContent = descriptionText + " - ₹" + amountValue;
 
 
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "❌";
+
+
+
+
     balance = balance + Number(amountValue);
-    console.log("Amount:", amountValue);
-    console.log("Type:", typeof amountValue);
-
-
-    console.log(balanceElement);
-
-
     balanceElement.textContent = "Balance: ₹" + balance;
-    console.log("Balance:", balance);
+   
    
 
 
+   li.appendChild(deleteBtn);
    
 
 
@@ -47,14 +44,24 @@ function tracker() {
     list.appendChild(li);
 
 
-    console.log(li);
+   
+    deleteBtn.addEventListener("click", function () {
+   
+
+
+   
+    balance = balance - Number(amountValue);
+    balanceElement.textContent = "Balance: ₹" + balance;
+
+
+    li.remove();
+
+
+});
 
 
     descriptionInput.value = "";
     amountInput.value = "";
-
-
-   
 
 
 }
