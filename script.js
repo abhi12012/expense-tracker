@@ -1,4 +1,3 @@
-
 let balance = 0;
 let transactions = [];
 let editId = null;
@@ -959,9 +958,62 @@ function exportCSV() {
     window.URL.revokeObjectURL(url);
 
 
+
+
+    alert("✅ Data exported successfully!");
+
+
 }
 
 
+
+
+
+
+function backupData() {
+
+
+    const backup = JSON.stringify(transactions);
+
+
+    const blob = new Blob(
+        [backup],
+        { type: "application/json" }
+    );
+
+
+
+
+    const url = window.URL.createObjectURL(blob);
+
+
+
+
+    const a = document.createElement("a");
+
+
+    a.href = url;
+
+
+    a.download = "expense-backup.json";
+
+
+
+
+    a.click();
+
+
+
+
+    window.URL.revokeObjectURL(url);
+
+
+
+
+    alert("💾 Backup created successfully!");
+
+
+}
 
 
 
@@ -1248,5 +1300,6 @@ if (document.body.classList.contains("dark")) {
 
 
 }
+
 
 

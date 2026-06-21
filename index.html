@@ -1,8 +1,3 @@
-Z-25
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,9 +123,7 @@ Show Range
         <button onclick="tracker()">Tracker</button>
 
 
-        <button onclick="exportCSV()">
-    📥 Export CSV
-</button>
+       
 
 
 <input
@@ -140,8 +133,31 @@ accept=".csv">
 
 
 <button onclick="importCSV()">
+   
     📂 Import CSV
 </button>
+
+
+
+
+ <button onclick="exportCSV()">
+    📥 Export CSV
+</button>
+
+
+<button onclick="backupData()">
+    💾 Backup Data
+</button>
+<input type="file" id="backupFile" accept=".json">
+
+
+<button onclick="restoreBackup()">
+    🔄 Restore Backup
+</button>
+
+
+
+
             </div>
 
 
@@ -162,3 +178,5 @@ accept=".csv">
 <script src="script.js"></script>
 </body>
 </html>
+
+
