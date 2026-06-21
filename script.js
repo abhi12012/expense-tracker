@@ -317,6 +317,7 @@ for (let category in categoryTotals) {
 
 
 function showToday() {
+    setActiveButton("btnToday");
 
 
     const today = new Date().toISOString().split("T")[0];
@@ -330,6 +331,7 @@ function showToday() {
 
 
 function showMonth() {
+    setActiveButton("btnMonth");
 
 
     const currentMonth = new Date().toISOString().slice(0,7);
@@ -344,9 +346,13 @@ function showMonth() {
 }
 
 
-
-
 function renderFiltered(filteredTransactions) {
+ 
+    setActiveButton("btnAll");  // 👈 यही add करना है
+
+
+    let incomeTotal = 0;
+    let expenseTotal = 0;
 
 
     const list = document.getElementById("list");
@@ -376,8 +382,16 @@ function renderFiltered(filteredTransactions) {
 
 
 
+function setActiveButton(activeId) {
 
 
+    document.getElementById("btnAll").classList.remove("active");
+    document.getElementById("btnToday").classList.remove("active");
+    document.getElementById("btnMonth").classList.remove("active");
+
+
+    document.getElementById(activeId).classList.add("active");
+}
 
 
 window.onload = function() {
@@ -394,4 +408,5 @@ window.onload = function() {
 
     renderTransactions();
 };
+
 
