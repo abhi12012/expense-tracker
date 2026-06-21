@@ -14,7 +14,7 @@
        
 
 
-        <select id="filter" onchange="renderTransactions()">
+<select id="filter" onchange="renderTransactions()">
 
 
     <option value="all">All</option>
@@ -42,6 +42,14 @@ placeholder="Search transaction">
     <option value="default">Sort Amount</option>
     <option value="high">High to Low</option>
     <option value="low">Low to High</option>
+</select>
+
+
+
+
+<select id="dateFilter">
+    <option value="all">All Dates</option>
+    <option value="today">Today</option>
 </select>
 
 
@@ -80,6 +88,7 @@ placeholder="Search transaction">
         <input type="text" id="description" placeholder="Enter description">
         <input type="number" id="amount" placeholder="Enter amount">
         <input type="text" id="category" placeholder="Enter category (Food, Rent...)">
+       
        <input type="date" id="date" value="">
         <label>
         <input type="checkbox" id="isExpense">

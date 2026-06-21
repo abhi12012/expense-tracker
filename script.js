@@ -77,9 +77,11 @@ function renderTransactions() {
     const sortValue = document.getElementById("sortAmount").value;
 
 
-console.log(sortValue);
+const dateFilterValue =
+document.getElementById("dateFilter").value;
 
 
+console.log(dateFilterValue);
 
 
 
@@ -150,6 +152,28 @@ if (categoryFilterValue !== "all") {
 
 
 }
+
+
+if (dateFilterValue === "today") {
+
+
+    const today =
+    new Date().toISOString().split("T")[0];
+
+
+    filteredTransactions =
+    filteredTransactions.filter(function(item) {
+
+
+        return item.date === today;
+
+
+    });
+
+
+}
+
+
 
 
 
@@ -544,7 +568,6 @@ document
     renderTransactions
    
 );
-
 
 
 
