@@ -494,16 +494,20 @@ function showMonth() {
 
 
 function renderFiltered(filteredTransactions) {
- 
-    setActiveButton("btnAll");  // 👈 यही add करना है
 
 
     let incomeTotal = 0;
     let expenseTotal = 0;
 
 
+    balance = 0;
+ 
+
+
     const list = document.getElementById("list");
     list.innerHTML = "";
+
+
 
 
     filteredTransactions.forEach(function(item) {
@@ -517,11 +521,52 @@ function renderFiltered(filteredTransactions) {
         " - ₹" + item.amount +
         " (" + item.type + ")" +
         " [" + item.category + "]" +
-        " 📅 " + item.date;
+        " 📅 " + (item.date || "No Date");
+
+
 
 
         list.appendChild(li);
+
+
+
+
+        if (item.type === "income") {
+
+
+            incomeTotal += item.amount;
+            balance += item.amount;
+
+
+        } else {
+
+
+            expenseTotal += item.amount;
+            balance -= item.amount;
+
+
+        }
+
+
     });
+
+
+
+
+    document.getElementById("income").textContent = incomeTotal;
+
+
+    document.getElementById("expense").textContent = expenseTotal;
+
+
+    document.getElementById("balance").textContent =
+    "Balance: ₹" + balance;
+
+
+    document.getElementById("counter").textContent =
+    "Transactions: " + filteredTransactions.length;
+
+
 }
 
 
@@ -574,3 +619,4 @@ document
 
 
 
+ 
