@@ -404,3 +404,83 @@ body.dark .summary-cards h4 {
 
 }
 
+
+
+
+/* Transaction List */
+
+
+#list {
+    list-style: none;
+    padding: 0;
+}
+
+
+#list li {
+    background: white;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    font-weight: 500;
+}
+
+
+
+
+/* Dark Mode Transaction Cards */
+
+
+body.dark #list li {
+
+
+    background: #2a2a2a;
+    color: white;
+
+
+    box-shadow: 0 2px 8px rgba(255,255,255,0.08);
+
+
+}
+
+
+
+
+#list button {
+
+
+    border: none;
+    padding: 8px 12px;
+    margin-left: 8px;
+
+
+    border-radius: 6px;
+    cursor: pointer;
+
+
+    font-size: 14px;
+    font-weight: bold;
+
+
+    transition: 0.3s;
+
+
+}
+
+
+
+
+#list button:hover {
+
+
+    transform: scale(1.05);
+
+
+}

@@ -1018,6 +1018,79 @@ function backupData() {
 
 
 
+
+
+function restoreBackup() {
+
+
+    const fileInput = document.getElementById("backupFile");
+
+
+    const file = fileInput.files[0];
+
+
+
+
+    if (!file) {
+
+
+        alert("Please select backup file");
+
+
+        return;
+
+
+    }
+
+
+
+
+    const reader = new FileReader();
+
+
+
+
+    reader.onload = function(e) {
+
+
+
+
+        transactions = JSON.parse(e.target.result);
+
+
+
+
+        localStorage.setItem(
+            "transactions",
+            JSON.stringify(transactions)
+        );
+
+
+
+
+        renderTransactions();
+
+
+
+
+        alert("🔄 Backup restored successfully!");
+
+
+    };
+
+
+
+
+    reader.readAsText(file);
+
+
+}
+
+
+
+
+
+
 function showMonthSummary() {
 
 

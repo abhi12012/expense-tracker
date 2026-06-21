@@ -1,9 +1,10 @@
 
+
 # Income & Expense Tracker
 
 A simple and practical Income & Expense Tracker application built using HTML, CSS, and JavaScript.
 
-This project helps users manage their income and expenses, track transactions, monitor financial activity, export data, and analyze spending patterns.
+This project helps users manage income and expenses, track transactions, monitor financial activity, backup and restore data, export and import records, and analyze spending patterns.
 
 ---
 
@@ -100,15 +101,50 @@ This project helps users manage their income and expenses, track transactions, m
 
 ---
 
-## Export System
+## Export & Import System
 
 * Export transactions as CSV file
-* Download transaction data for external use
+* Import transaction data
+* Download transaction records for external use
 * Easy data backup and management
 
 ---
 
+## Backup & Restore System
+
+* Create transaction backup
+* Restore previous transaction data
+* Protect important financial records
+* Recover data when needed
+* Safe data management system
+
+---
+
+## Alert & Validation System
+
+* Alert messages for user actions
+* Confirmation before deleting transactions
+* Warning for invalid inputs
+* Prevent empty transaction entries
+* Improved user experience
+
+---
+
 # Updates & Changelog
+
+## Version 2.0 - Backup, Restore & Data Management Update
+
+Added:
+
+* Added Backup System
+* Added Restore System
+* Added Import Data feature
+* Improved Export functionality
+* Added user alerts and confirmations
+* Improved data safety and management
+* Enhanced overall application experience
+
+---
 
 ## Version 1.9 - Monthly Summary Update
 
@@ -119,7 +155,6 @@ Added:
 * Added monthly balance calculation
 * Improved monthly financial analysis
 * Added better data organization without affecting existing transactions
-* Enhanced financial tracking experience
 
 ---
 
@@ -154,7 +189,6 @@ Added:
 * Added highest spending category analysis
 * Added highest category amount calculation
 * Improved spending insights
-* Enhanced financial tracking experience
 
 ---
 
@@ -178,7 +212,6 @@ Added:
 * Added Amount Sorting feature
 * Sort transactions from High to Low
 * Sort transactions from Low to High
-* Improved data management system
 
 ---
 
@@ -201,7 +234,6 @@ Added:
 * Added Today filter
 * Added This Month filter
 * Added All Transactions filter
-* Improved expense tracking system
 
 ---
 
@@ -237,17 +269,15 @@ Added:
 
 * Dashboard
 * Advanced Charts & Analytics
-* Import Data
 * Dark Mode
 * Backend Integration
 * User Authentication
+* Cloud Data Synchronization
 
 ---
 
 # Author
 
 Abhishek
-
-
 
 
