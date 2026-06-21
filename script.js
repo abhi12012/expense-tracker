@@ -490,3 +490,20 @@ window.onload = function() {
     renderTransactions();
 };
 
+
+
+
+
+
+document
+.getElementById("searchInput")
+.addEventListener(
+    "input",
+    renderTransactions
+   
+);
+
+
+
+
+
