@@ -257,12 +257,29 @@ const chartArea = document.getElementById("chartArea");
 chartArea.innerHTML = "<h3>Category Chart</h3>";
 
 
+
+
+
+
+let totalAmount = 0;
+
+
+for (let category in categoryTotals) {
+    totalAmount += categoryTotals[category];
+}
 chartData.forEach(function(item) {
+
+
+     const percentage =
+    ((item.amount / totalAmount) * 100).toFixed(1);
 
 
     chartArea.innerHTML += `
         <div style="margin-bottom:10px;">
-            <p>${item.category}: ₹${item.amount}</p>
+           <p>
+${item.category}: ₹${item.amount}
+(${percentage}%)
+</p>
 
 
             <div style="
