@@ -1,5 +1,8 @@
 let balance = 0;
 let transactions = [];
+let editId = null;
+
+
 
 
 function tracker() {
@@ -35,6 +38,48 @@ if (!dateValue) {
         alert("Please fill all fields");
         return;
     }
+
+
+
+
+      if (editId !== null) {
+
+
+    let item = transactions.find(function(t) {
+        return t.id === editId;
+    });
+
+
+
+
+    item.description = descriptionText;
+    item.amount = Number(amountValue);
+    item.category = categoryText;
+    item.date = dateValue;
+
+
+
+
+    editId = null;
+
+
+
+
+    localStorage.setItem(
+        "transactions",
+        JSON.stringify(transactions)
+    );
+
+
+
+
+    renderTransactions();
+
+
+    return;
+
+
+}
 
 
       transactions.push({
@@ -493,6 +538,14 @@ function showMonth() {
 }
 
 
+
+
+
+
+
+
+
+
 function renderFiltered(filteredTransactions) {
     console.log("renderFiltered chal raha hai");
 
@@ -527,6 +580,26 @@ item.description +
 
 
 
+const editBtn = document.createElement("button");
+editBtn.textContent = "✏️";
+
+
+
+
+editBtn.addEventListener("click", function() {
+   
+    editId = item.id;
+
+
+    document.getElementById("description").value = item.description;
+    document.getElementById("amount").value = item.amount;
+    document.getElementById("category").value = item.category;
+    document.getElementById("date").value = item.date;
+
+
+});
+
+
 
 
 const deleteBtn = document.createElement("button");
@@ -559,8 +632,7 @@ deleteBtn.addEventListener("click", function() {
 });
 
 
-
-
+li.appendChild(editBtn);
 li.appendChild(deleteBtn);
 
 
@@ -649,7 +721,6 @@ document
     renderTransactions
    
 );
-
 
 
 

@@ -1,3 +1,5 @@
+
+
 # Expense Tracker
 
 A simple and practical Expense Tracker application built using HTML, CSS, and JavaScript.
@@ -39,6 +41,13 @@ This project helps users manage their income and expenses, track transactions, a
 * View total transactions by category
 * Better expense analysis
 
+### Category Analytics & Visualization
+* Category Chart visualization
+* Category-wise expense analysis
+* Percentage-based category distribution
+* Improved chart presentation
+* Better understanding of spending patterns
+
 ### Data Management
 * Data saved using Local Storage
 * Transactions remain after page refresh
@@ -46,42 +55,37 @@ This project helps users manage their income and expenses, track transactions, a
 * Prevent duplicate transaction descriptions
 * Input validation
 
-## Version 1.4 - 20 June 2026
 
-Added:
-* Amount sorting feature
-* Sort transactions from High to Low
-* Sort transactions from Low to High
-* Improved transaction analysis
 ---
-## Version 1.3 - 20 June 2026
-
-Added:
-* Search Transactions feature
-* Search transactions by description
-* Improved transaction finding system
-* Better user experience
-
 
 # Updates & Changelog
 
-## Version 1.2 - 19 June 2026
+## Version 1.3 - 19 June 2026
 
 Added:
-* Date selection feature
-* Today filter
-* This Month filter
-* All Transactions filter
-* Category Summary
+* Added Category Chart visualization
+* Added percentage-based category analysis
+* Added chart headings for better understanding
+* Improved chart UI and presentation
+* Enhanced financial data visualization
+* Improved overall user experience
+
+
+## Version 1.2
+
+Added:
+* Added transaction date selection feature
+* Added Today filter
+* Added This Month filter
+* Added All Transactions filter
 * Improved expense tracking system
-* Improved overall project functionality
 
 
 ## Version 1.1
 
 Added:
-* Transaction filtering system
-* Category-based organization
+* Added transaction filtering system
+* Added category-based transaction organization
 * Improved transaction management
 
 
@@ -107,7 +111,7 @@ Initial Release:
 # Future Updates
 
 * Dashboard
-* Charts & Analytics
+* Advanced Charts & Analytics
 * Export CSV
 * Import Data
 * Search Transactions
@@ -121,6 +125,4 @@ Initial Release:
 # Author
 
 Abhishek
-
-
 
