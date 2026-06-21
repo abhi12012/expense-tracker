@@ -274,6 +274,24 @@ chartData.forEach(function(item) {
     ((item.amount / totalAmount) * 100).toFixed(1);
 
 
+    let color = "#4CAF50";
+
+
+if (item.category.toLowerCase() === "food") {
+    color = "orange";
+}
+
+
+if (item.category.toLowerCase() === "travel") {
+    color = "blue";
+}
+
+
+if (item.category.toLowerCase() === "salary") {
+    color = "green";
+}
+
+
     chartArea.innerHTML += `
         <div style="margin-bottom:10px;">
            <p>
@@ -282,13 +300,17 @@ ${item.category}: ₹${item.amount}
 </p>
 
 
+
+
+
+
             <div style="
                 background:#ddd;
                 height:20px;
                 width:300px;
             ">
                 <div style="
-                    background:green;
+                    background:${color};
                     height:20px;
                     width:${item.amount / 10}px;
                 "></div>
@@ -461,4 +483,5 @@ window.onload = function() {
 
     renderTransactions();
 };
+
 
