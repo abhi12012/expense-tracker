@@ -428,11 +428,18 @@ document.getElementById("analyticsArea");
 
 analyticsArea.innerHTML = `
 <h3>📊 Analytics</h3>
+
+
 <p>🏆 Highest Category: ${highestCategory}</p>
+
+
 <p>💰 Highest Amount: ₹${highestAmount}</p>
+
+
+<p>💾 Savings: ₹${savings}</p>
+
+
 `;
-
-
 
 
 
@@ -440,12 +447,8 @@ analyticsArea.innerHTML = `
 
 
 chartArea.innerHTML = `
-<h3>📊 Income vs Expense</h3>
-
-
+<h3>💰  Analytics Charts</h3>
 `;
-
-
 
 
 
@@ -962,6 +965,118 @@ function exportCSV() {
 
 
 
+function showMonthSummary() {
+
+
+    const today = new Date();
+
+
+    const currentMonth = today.getMonth();
+    const currentYear = today.getFullYear();
+
+
+    console.log(transactions);
+    console.log("All Transactions:", transactions);
+
+
+
+
+    const monthTransactions = transactions.filter(function(item) {
+
+
+        const itemDate = new Date(item.date);
+
+
+        return (
+            itemDate.getMonth() === currentMonth &&
+            itemDate.getFullYear() === currentYear
+        );
+
+
+    });
+
+
+
+
+    console.log(monthTransactions);
+
+
+    let monthIncome = 0;
+let monthExpense = 0;
+
+
+
+
+monthTransactions.forEach(function(item) {
+
+
+    if (item.type === "income") {
+
+
+        monthIncome += item.amount;
+
+
+    } else {
+
+
+        monthExpense += item.amount;
+
+
+    }
+
+
+});
+
+
+
+
+let monthSavings = monthIncome - monthExpense;
+
+
+
+
+console.log("Month Income:", monthIncome);
+console.log("Month Expense:", monthExpense);
+console.log("Month Savings:", monthSavings);
+
+
+const summaryArea = document.getElementById("summaryArea");
+
+
+summaryArea.innerHTML = `
+
+
+<h3>📅 This Month Summary</h3>
+
+
+<p>🟢 Income: ₹${monthIncome}</p>
+
+
+<p>🔴 Expense: ₹${monthExpense}</p>
+
+
+<p>💰 Savings: ₹${monthSavings}</p>
+
+
+<p>📌 Transactions: ${monthTransactions.length}</p>
+
+
+`;
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
 function importCSV() {
 
 
@@ -1110,4 +1225,3 @@ if (document.body.classList.contains("dark")) {
 
 
 }
-
