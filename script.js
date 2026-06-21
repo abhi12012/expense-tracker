@@ -548,6 +548,9 @@ function showMonth() {
 
 function renderFiltered(filteredTransactions) {
     console.log("renderFiltered chal raha hai");
+     console.log(filteredTransactions);
+   
+   
 
 
     let incomeTotal = 0;
@@ -611,6 +614,13 @@ deleteBtn.textContent = "❌";
 deleteBtn.addEventListener("click", function() {
 
 
+
+
+   if (!confirm("Are you sure?")) {
+    return;
+}
+
+
     transactions = transactions.filter(function(t) {
         return t.id !== item.id;
     });
@@ -630,6 +640,9 @@ deleteBtn.addEventListener("click", function() {
 
 
 });
+
+
+console.log("Delete button created");
 
 
 li.appendChild(editBtn);
@@ -766,6 +779,83 @@ function exportCSV() {
 
 
     window.URL.revokeObjectURL(url);
+
+
+}
+
+
+
+
+
+
+function importCSV() {
+
+
+    const file =
+    document.getElementById("csvFile").files[0];
+
+
+    if (!file) {
+        alert("Please select a CSV file");
+        return;
+    }
+
+
+    const reader = new FileReader();
+
+
+    reader.onload = function(event) {
+
+
+        const csvData = event.target.result;
+
+
+        const rows =
+        csvData.split("\n");
+
+
+        transactions = [];
+
+
+        for (let i = 1; i < rows.length; i++) {
+
+
+            const cols =
+            rows[i].split(",");
+
+
+            if (cols.length < 5) continue;
+
+
+            transactions.push({
+                id: Date.now() + i,
+                description: cols[0],
+                amount: Number(cols[1]),
+                type: cols[2],
+                category: cols[3],
+                date: cols[4].trim()
+            });
+
+
+        }
+
+
+        localStorage.setItem(
+            "transactions",
+            JSON.stringify(transactions)
+        );
+
+
+        renderTransactions();
+
+
+        alert("CSV Imported Successfully!");
+
+
+    };
+
+
+    reader.readAsText(file);
 
 
 }

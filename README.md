@@ -4,7 +4,7 @@
 
 A simple and practical Expense Tracker application built using HTML, CSS, and JavaScript.
 
-This project helps users manage their income and expenses, track transactions, and analyze spending patterns.
+This project helps users manage their income and expenses, track transactions, export data, and analyze spending patterns.
 
 ---
 
@@ -45,6 +45,7 @@ This project helps users manage their income and expenses, track transactions, a
 * Category Chart visualization
 * Category-wise expense analysis
 * Percentage-based category distribution
+* Chart headings for better understanding
 * Improved chart presentation
 * Better understanding of spending patterns
 
@@ -55,12 +56,27 @@ This project helps users manage their income and expenses, track transactions, a
 * Prevent duplicate transaction descriptions
 * Input validation
 
+### Export System
+* Export transactions as CSV file
+* Download transaction data for external use
+* Easy data backup and management
+
 
 ---
 
 # Updates & Changelog
 
-## Version 1.3 - 19 June 2026
+## Version 1.4 - 19 June 2026
+
+Added:
+* Added CSV Export feature
+* Users can download transaction data as CSV file
+* Improved data management system
+* Added data backup functionality
+* Enhanced user experience
+
+
+## Version 1.3
 
 Added:
 * Added Category Chart visualization
@@ -68,7 +84,6 @@ Added:
 * Added chart headings for better understanding
 * Improved chart UI and presentation
 * Enhanced financial data visualization
-* Improved overall user experience
 
 
 ## Version 1.2
@@ -112,7 +127,6 @@ Initial Release:
 
 * Dashboard
 * Advanced Charts & Analytics
-* Export CSV
 * Import Data
 * Search Transactions
 * Dark Mode
@@ -125,4 +139,6 @@ Initial Release:
 # Author
 
 Abhishek
+
+
 
