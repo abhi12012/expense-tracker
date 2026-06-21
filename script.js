@@ -125,7 +125,8 @@ const dateFilterValue =
 document.getElementById("dateFilter").value;
 
 
-console.log(dateFilterValue);
+
+
 
 
 
@@ -135,7 +136,7 @@ console.log(dateFilterValue);
 
     const categoryFilterValue =
     document.getElementById("categoryFilter").value;
-    console.log(categoryFilterValue);
+   
 
 
 
@@ -343,11 +344,12 @@ filteredTransactions.forEach(function(item) {
 
 
     categoryTotals[item.category] += item.amount;
-   console.log(JSON.stringify(categoryTotals));
+   
 });
 
 
-console.log(categoryTotals);
+
+
 
 
 
@@ -367,7 +369,8 @@ for (let category in categoryTotals) {
 }
 
 
-console.log(chartData);
+
+
 
 
 const chartArea = document.getElementById("chartArea");
@@ -430,7 +433,23 @@ analyticsArea.innerHTML = `
 `;
 
 
-chartArea.innerHTML = "<h3>Category Chart</h3>";
+
+
+
+
+
+
+chartArea.innerHTML = `
+<h3>📊 Income vs Expense</h3>
+
+
+`;
+
+
+
+
+
+
 
 
 
@@ -498,6 +517,61 @@ ${item.category}: ₹${item.amount}
 });
 
 
+
+
+let incomeExpenseData = [
+    {
+        type: "Income",
+        amount: incomeTotal
+    },
+    {
+        type: "Expense",
+        amount: expenseTotal
+    }
+];
+
+
+
+
+incomeExpenseData.forEach(function(item) {
+
+
+    chartArea.innerHTML += `
+
+
+    <div style="margin-bottom:10px;">
+
+
+        <p>
+        ${item.type}: ₹${item.amount}
+        </p>
+
+
+        <div style="
+            background:#ddd;
+            height:20px;
+            width:300px;
+        ">
+
+
+            <div style="
+                background:green;
+                height:20px;
+                width:${item.amount / 10}px;
+            ">
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    `;
+
+
+});
 
 
 
@@ -580,7 +654,7 @@ function showToday() {
 
 
 
-    console.log(filtered);
+   
     renderFiltered(filtered);
 }
 
@@ -749,7 +823,8 @@ deleteBtn.addEventListener("click", function() {
 });
 
 
-console.log("Delete button created");
+
+
 
 
 li.appendChild(editBtn);
@@ -779,9 +854,6 @@ list.appendChild(li);
     });
 
 
-console.log("Filtered Income:", incomeTotal);
-console.log("Filtered Expense:", expenseTotal);
-console.log("Filtered Balance:", balance);
 
 
 
@@ -794,7 +866,8 @@ console.log("Filtered Balance:", balance);
 
     document.getElementById("balance").textContent =
     "Balance: ₹" + balance;
-console.log("SCREEN UPDATE DONE");
+
+
 
 
 
@@ -1037,5 +1110,4 @@ if (document.body.classList.contains("dark")) {
 
 
 }
-
 

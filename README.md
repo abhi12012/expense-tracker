@@ -1,9 +1,8 @@
+# Income & Expense Tracker
 
-# Expense Tracker
+A simple and practical Income & Expense Tracker application built using HTML, CSS, and JavaScript.
 
-A simple and practical Expense Tracker application built using HTML, CSS, and JavaScript.
-
-This project helps users manage income and expenses, track transactions, export data, and analyze spending patterns.
+This project helps users manage their income and expenses, track transactions, monitor financial activity, export data, and analyze spending patterns.
 
 ---
 
@@ -17,14 +16,16 @@ This project helps users manage income and expenses, track transactions, export 
 * Delete transactions
 * View transaction history
 * Search transactions by description
+* Track income and expense records easily
 
 ---
 
 ## Financial Summary
 
 * Automatic balance calculation
-* Income summary
-* Expense summary
+* Total income summary
+* Total expense summary
+* Current balance tracking
 * Transaction counter
 
 ---
@@ -96,6 +97,17 @@ This project helps users manage income and expenses, track transactions, export 
 ---
 
 # Updates & Changelog
+
+## Version 1.8 - Income & Expense Tracker Update
+
+Added:
+
+* Improved income and expense tracking system
+* Added better financial record management
+* Enhanced income and expense monitoring
+* Improved transaction management experience
+
+---
 
 ## Version 1.7 - Date Range Filter Update
 
@@ -210,5 +222,6 @@ Added:
 # Author
 
 Abhishek
+
 
 
