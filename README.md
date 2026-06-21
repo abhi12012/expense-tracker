@@ -1,4 +1,3 @@
-
 # Expense Tracker
 
 A simple and practical Expense Tracker application built using HTML, CSS, and JavaScript.
@@ -42,6 +41,8 @@ This project helps users manage income and expenses, track transactions, export 
 * Today
 * This Month
 * All Transactions
+* Custom Date Range Filter
+* Select transactions between two dates
 
 ---
 
@@ -104,6 +105,18 @@ This project helps users manage income and expenses, track transactions, export 
 ---
 
 # Updates & Changelog
+
+## Version 1.7 - Date Range Filter Update
+
+Added:
+
+* Added Custom Date Range Filter
+* Select start date and end date
+* View transactions between selected dates
+* Improved date-based transaction analysis
+* Enhanced filtering system
+
+---
 
 ## Version 1.6 - Dark Mode Update
 
@@ -208,8 +221,4 @@ Added:
 # Author
 
 Abhishek
-
-
-
-
 

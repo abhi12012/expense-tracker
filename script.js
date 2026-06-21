@@ -1,4 +1,3 @@
-
 let balance = 0;
 let transactions = [];
 let editId = null;
@@ -604,6 +603,50 @@ function showMonth() {
 
 
 
+function showCustomRange() {
+
+
+
+
+const fromDate =
+document.getElementById("fromDate").value;
+
+
+const toDate =
+document.getElementById("toDate").value;
+
+
+if (!fromDate || !toDate) {
+
+
+    alert("Please select both dates");
+    return;
+
+
+}
+
+
+const filtered =
+transactions.filter(function(item) {
+
+
+    return item.date >= fromDate &&
+           item.date <= toDate;
+
+
+});
+
+
+renderFiltered(filtered);
+
+
+
+
+}
+
+
+
+
 
 
 
@@ -966,5 +1009,4 @@ if (document.body.classList.contains("dark")) {
 
 
 }
-
 

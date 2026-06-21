@@ -61,7 +61,26 @@ placeholder="Search transaction">
 
 
 
-<button id="btnAll" onclick="renderTransactions()">All</button>
+
+
+
+
+
+
+
+
+<button id="btnAll" onclick="renderTransactions()">All</button> <button id="btnToday" onclick="showToday()">Today</button> <button id="btnMonth" onclick="showMonth()">This Month</button>
+
+
+<input type="date" id="fromDate">
+
+
+<input type="date" id="toDate">
+
+
+<button onclick="showCustomRange()">
+Show Range
+</button>
 <button id="btnToday" onclick="showToday()">Today</button>
 <button id="btnMonth" onclick="showMonth()">This Month</button>
 
@@ -138,4 +157,3 @@ accept=".csv">
 <script src="script.js"></script>
 </body>
 </html>
-
