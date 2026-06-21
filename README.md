@@ -31,6 +31,17 @@ This project helps users manage their income and expenses, track transactions, m
 
 ---
 
+## Monthly Summary
+
+* View monthly income summary
+* View monthly expense summary
+* Calculate monthly balance
+* Analyze monthly transaction data
+* Track monthly financial activity
+* Better monthly financial organization
+
+---
+
 ## Transaction Filtering
 
 ### Type Filter
@@ -98,6 +109,19 @@ This project helps users manage their income and expenses, track transactions, m
 ---
 
 # Updates & Changelog
+
+## Version 1.9 - Monthly Summary Update
+
+Added:
+
+* Added Monthly Summary section
+* View monthly income and expenses separately
+* Added monthly balance calculation
+* Improved monthly financial analysis
+* Added better data organization without affecting existing transactions
+* Enhanced financial tracking experience
+
+---
 
 ## Version 1.8 - Income & Expense Tracker Update
 
@@ -223,7 +247,6 @@ Added:
 # Author
 
 Abhishek
-
 
 
 

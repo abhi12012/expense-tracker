@@ -1,3 +1,4 @@
+
 let balance = 0;
 let transactions = [];
 let editId = null;
@@ -1049,21 +1050,43 @@ summaryArea.innerHTML = `
 <h3>📅 This Month Summary</h3>
 
 
-<p>🟢 Income: ₹${monthIncome}</p>
+<div class="summary-cards">
 
 
-<p>🔴 Expense: ₹${monthExpense}</p>
+<div class="card income-card">
+<h4>🟢 Income</h4>
+<p>₹${monthIncome}</p>
+</div>
 
 
-<p>💰 Savings: ₹${monthSavings}</p>
 
 
-<p>📌 Transactions: ${monthTransactions.length}</p>
+<div class="card expense-card">
+<h4>🔴 Expense</h4>
+<p>₹${monthExpense}</p>
+</div>
+
+
+
+
+<div class="card saving-card">
+<h4>💰 Savings</h4>
+<p>₹${monthSavings}</p>
+</div>
+
+
+
+
+<div class="card">
+<h4>📌 Transactions</h4>
+<p>${monthTransactions.length}</p>
+</div>
+
+
+</div>
 
 
 `;
-
-
 
 
 
@@ -1225,3 +1248,5 @@ if (document.body.classList.contains("dark")) {
 
 
 }
+
+
