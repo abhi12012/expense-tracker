@@ -1,3 +1,4 @@
+
 let balance = 0;
 let transactions = [];
 let editId = null;
@@ -768,20 +769,6 @@ function setActiveButton(activeId) {
 }
 
 
-window.onload = function() {
-
-
-    const savedData =
-        localStorage.getItem("transactions");
-
-
-    if (savedData) {
-        transactions = JSON.parse(savedData);
-    }
-
-
-    renderTransactions();
-};
 
 
 
@@ -917,6 +904,65 @@ function importCSV() {
 
 
     reader.readAsText(file);
+
+
+}
+
+
+window.onload = function() {
+
+
+const savedTheme =
+localStorage.getItem("theme");
+
+
+if (savedTheme === "dark") {
+document.body.classList.add("dark");
+}
+
+
+
+
+    const savedData =
+        localStorage.getItem("transactions");
+
+
+    if (savedData) {
+        transactions = JSON.parse(savedData);
+    }
+
+
+    renderTransactions();
+};
+
+
+
+
+
+
+
+
+function toggleTheme() {
+
+
+
+
+document.body.classList.toggle("dark");
+
+
+if (document.body.classList.contains("dark")) {
+
+
+    localStorage.setItem("theme", "dark");
+
+
+} else {
+
+
+    localStorage.setItem("theme", "light");
+
+
+}
 
 
 }

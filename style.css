@@ -255,3 +255,15 @@ button {
 }
 
 
+
+
+.dark {
+    background: #222;
+    color: white;
+}
+
+
+.dark .container {
+    background: #333;
+    color: white;
+}
