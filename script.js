@@ -494,6 +494,7 @@ function showMonth() {
 
 
 function renderFiltered(filteredTransactions) {
+    console.log("renderFiltered chal raha hai");
 
 
     let incomeTotal = 0;
@@ -516,19 +517,54 @@ function renderFiltered(filteredTransactions) {
         const li = document.createElement("li");
 
 
-        li.textContent =
-        item.description +
-        " - ₹" + item.amount +
-        " (" + item.type + ")" +
-        " [" + item.category + "]" +
-        " 📅 " + (item.date || "No Date");
+       li.textContent =
+item.description +
+" - ₹" + item.amount +
+" (" + item.type + ")" +
+" [" + item.category + "]" +
+" 📅 " + (item.date || "No Date");
 
 
 
 
-        list.appendChild(li);
 
 
+const deleteBtn = document.createElement("button");
+deleteBtn.textContent = "❌";
+
+
+
+
+deleteBtn.addEventListener("click", function() {
+
+
+    transactions = transactions.filter(function(t) {
+        return t.id !== item.id;
+    });
+
+
+
+
+    localStorage.setItem(
+        "transactions",
+        JSON.stringify(transactions)
+    );
+
+
+
+
+    showToday();
+
+
+});
+
+
+
+
+li.appendChild(deleteBtn);
+
+
+list.appendChild(li);
 
 
         if (item.type === "income") {
@@ -618,5 +654,3 @@ document
 
 
 
-
- 
