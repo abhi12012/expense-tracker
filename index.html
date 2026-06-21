@@ -36,6 +36,19 @@ id="searchInput"
 placeholder="Search transaction">
 
 
+
+
+<select id="sortAmount" onchange="renderTransactions()">
+    <option value="default">Sort Amount</option>
+    <option value="high">High to Low</option>
+    <option value="low">Low to High</option>
+</select>
+
+
+
+
+
+
 <button id="btnAll" onclick="renderTransactions()">All</button>
 <button id="btnToday" onclick="showToday()">Today</button>
 <button id="btnMonth" onclick="showMonth()">This Month</button>
@@ -94,5 +107,3 @@ placeholder="Search transaction">
 <script src="script.js"></script>
 </body>
 </html>
-
-

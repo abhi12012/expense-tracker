@@ -73,16 +73,17 @@ function renderTransactions() {
     const list = document.getElementById("list");
     const balanceElement = document.getElementById("balance");
     const counterElement = document.getElementById("counter");
+    const searchValue = document.getElementById("searchInput").value.toLowerCase();
+    const sortValue = document.getElementById("sortAmount").value;
 
 
-   
-    const searchValue =
-document.getElementById("searchInput")
-.value
-.toLowerCase();
+console.log(sortValue);
 
 
-console.log(searchValue);
+
+
+
+
    
 
 
@@ -107,6 +108,30 @@ console.log(searchValue);
 let filteredTransactions = transactions;
 
 
+
+
+if (searchValue !== "") {
+
+
+    filteredTransactions =
+    filteredTransactions.filter(function(item) {
+
+
+        return (
+            item.description.toLowerCase().includes(searchValue) ||
+            item.category.toLowerCase().includes(searchValue) ||
+            item.type.toLowerCase().includes(searchValue)
+        );
+
+
+    });
+
+
+}
+
+
+
+
 if (filterValue !== "all") {
     filteredTransactions =
         transactions.filter(
@@ -129,8 +154,25 @@ if (categoryFilterValue !== "all") {
 
 
 
+if (sortValue === "high") {
 
 
+    filteredTransactions.sort(function(a, b) {
+        return b.amount - a.amount;
+    });
+
+
+}
+
+
+if (sortValue === "low") {
+console.log("HIGH WORKING");
+    filteredTransactions.sort(function(a, b) {
+        return a.amount - b.amount;
+    });
+
+
+}
 
 
     filteredTransactions.forEach(function(item) {
@@ -502,6 +544,8 @@ document
     renderTransactions
    
 );
+
+
 
 
 

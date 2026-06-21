@@ -1,4 +1,3 @@
-
 # Expense Tracker
 
 A simple and practical Expense Tracker application built using HTML, CSS, and JavaScript.
@@ -47,7 +46,13 @@ This project helps users manage their income and expenses, track transactions, a
 * Prevent duplicate transaction descriptions
 * Input validation
 
+## Version 1.4 - 20 June 2026
 
+Added:
+* Amount sorting feature
+* Sort transactions from High to Low
+* Sort transactions from Low to High
+* Improved transaction analysis
 ---
 ## Version 1.3 - 20 June 2026
 
@@ -116,4 +121,6 @@ Initial Release:
 # Author
 
 Abhishek
+
+
 
