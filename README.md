@@ -1,3 +1,4 @@
+
 # Expense Tracker
 
 A simple and practical Expense Tracker application built using HTML, CSS, and JavaScript.
@@ -28,9 +29,9 @@ This project helps users manage income and expenses, track transactions, export 
 
 ---
 
-## Filtering System
+## Transaction Filtering
 
-### Transaction Type Filter
+### Type Filter
 
 * All Transactions
 * Income
@@ -46,6 +47,15 @@ This project helps users manage income and expenses, track transactions, export 
 
 ---
 
+## Sorting System
+
+* Sort transactions by amount
+* High to Low amount sorting
+* Low to High amount sorting
+* Improved transaction analysis
+
+---
+
 ## Category Management
 
 * Category-based transaction organization
@@ -56,23 +66,14 @@ This project helps users manage income and expenses, track transactions, export 
 
 ---
 
-## Category Analytics & Visualization
+## Analytics & Visualization
 
 * Category Chart visualization
 * Category-wise expense analysis
 * Percentage-based category distribution
-* Chart headings for better understanding
-* Improved chart presentation
+* Highest spending category
+* Highest category amount calculation
 * Better spending insights
-
----
-
-## Sorting System
-
-* Sort transactions by amount
-* High to Low amount sorting
-* Low to High amount sorting
-* Improved transaction analysis
 
 ---
 
@@ -94,16 +95,6 @@ This project helps users manage income and expenses, track transactions, export 
 
 ---
 
-## Analytics & Insights
-
-* Added expense analytics section
-* Shows highest spending category
-* Displays highest category amount
-* Provides better financial insights
-* Helps users understand spending patterns
-
----
-
 # Updates & Changelog
 
 ## Version 1.7 - Date Range Filter Update
@@ -118,26 +109,26 @@ Added:
 
 ---
 
-## Version 1.6 - Dark Mode Update
-
-Added:
-
-* Added Dark Mode feature
-* Toggle between Light and Dark theme
-* Improved user interface experience
-* Better visibility in low light environment
-
----
-
-## Version 1.5 - Analytics Update
+## Version 1.6 - Analytics Update
 
 Added:
 
 * Added Analytics section
-* Added highest category analysis
-* Added highest amount calculation
+* Added highest spending category analysis
+* Added highest category amount calculation
 * Improved spending insights
 * Enhanced financial tracking experience
+
+---
+
+## Version 1.5 - Chart Visualization Update
+
+Added:
+
+* Added Category Chart visualization
+* Added percentage-based category analysis
+* Added chart headings for better understanding
+* Improved chart presentation
 
 ---
 
@@ -146,7 +137,7 @@ Added:
 Added:
 
 * Added CSV Export feature
-* Users can download transaction data as CSV file
+* Download transaction data as CSV file
 * Added Amount Sorting feature
 * Sort transactions from High to Low
 * Sort transactions from Low to High
@@ -154,16 +145,14 @@ Added:
 
 ---
 
-## Version 1.3 - Search & Chart Update
+## Version 1.3 - Search & Category Update
 
 Added:
 
-* Added Category Chart visualization
-* Added percentage-based category analysis
 * Added Search Transactions feature
 * Search transactions by description
+* Added category-based organization
 * Improved transaction finding system
-* Enhanced chart presentation
 
 ---
 
@@ -184,7 +173,7 @@ Added:
 Added:
 
 * Added transaction filtering system
-* Added category-based transaction organization
+* Added category management
 * Improved transaction management
 
 ---
@@ -221,4 +210,5 @@ Added:
 # Author
 
 Abhishek
+
 

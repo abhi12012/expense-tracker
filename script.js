@@ -16,6 +16,7 @@ function tracker() {
 
     const categoryInput = document.getElementById("category");
 const categoryText = categoryInput.value;
+console.log("Category:", categoryText);
 
 
     const descriptionText = descriptionInput.value;
@@ -80,8 +81,7 @@ if (!dateValue) {
 
 
 }
-
-
+console.log("New Category:", categoryText);
       transactions.push({
         id: Date.now(),
         description: descriptionText,
@@ -106,8 +106,7 @@ if (!dateValue) {
    
 }
 function renderTransactions() {
-
-
+console.log("renderTransactions चला");
     let incomeTotal = 0;
     let expenseTotal = 0;
 
@@ -320,8 +319,8 @@ item.description +
     });
 
 
-document.getElementById("income").textContent = incomeTotal;
-document.getElementById("expense").textContent = expenseTotal;
+document.getElementById("income").textContent = "TEST " + incomeTotal;
+document.getElementById("expense").textContent = "TEST " + expenseTotal;
 
 
 
@@ -335,7 +334,7 @@ document.getElementById("expense").textContent = expenseTotal;
 let categoryTotals = {};
 
 
-transactions.forEach(function(item) {
+filteredTransactions.forEach(function(item) {
 
 
     if (!categoryTotals[item.category]) {
@@ -344,8 +343,7 @@ transactions.forEach(function(item) {
 
 
     categoryTotals[item.category] += item.amount;
-
-
+   console.log(JSON.stringify(categoryTotals));
 });
 
 
@@ -560,7 +558,8 @@ for (let category in categoryTotals) {
 
 
 
-    balanceElement.textContent = "Balance: ₹" + balance;
+    balanceElement.textContent =
+"TEST Balance: ₹" + balance;
     counterElement.textContent = "Transactions: " + filteredTransactions.length;
 }
 
@@ -579,6 +578,9 @@ function showToday() {
     const filtered = transactions.filter(item => item.date === today);
 
 
+
+
+    console.log(filtered);
     renderFiltered(filtered);
 }
 
@@ -777,6 +779,11 @@ list.appendChild(li);
     });
 
 
+console.log("Filtered Income:", incomeTotal);
+console.log("Filtered Expense:", expenseTotal);
+console.log("Filtered Balance:", balance);
+
+
 
 
     document.getElementById("income").textContent = incomeTotal;
@@ -787,6 +794,9 @@ list.appendChild(li);
 
     document.getElementById("balance").textContent =
     "Balance: ₹" + balance;
+console.log("SCREEN UPDATE DONE");
+
+
 
 
     document.getElementById("counter").textContent =
@@ -972,6 +982,24 @@ document.body.classList.add("dark");
 
     if (savedData) {
         transactions = JSON.parse(savedData);
+
+
+        transactions = transactions.map(function(item) {
+
+
+    if (!item.category || item.category === "") {
+
+
+        item.category = "Other";
+
+
+    }
+
+
+    return item;
+
+
+});
     }
 
 
@@ -1009,4 +1037,5 @@ if (document.body.classList.contains("dark")) {
 
 
 }
+
 
