@@ -723,5 +723,51 @@ document
 );
 
 
+function exportCSV() {
+
+
+    let csv =
+    "Description,Amount,Type,Category,Date\n";
+
+
+    transactions.forEach(function(item) {
+
+
+        csv +=
+        item.description + "," +
+        item.amount + "," +
+        item.type + "," +
+        item.category + "," +
+        item.date + "\n";
+
+
+    });
+
+
+    const blob = new Blob(
+        [csv],
+        { type: "text/csv" }
+    );
+
+
+    const url =
+    window.URL.createObjectURL(blob);
+
+
+    const a =
+    document.createElement("a");
+
+
+    a.href = url;
+    a.download = "expenses.csv";
+
+
+    a.click();
+
+
+    window.URL.revokeObjectURL(url);
+
+
+}
 
 
