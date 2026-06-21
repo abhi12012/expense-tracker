@@ -316,8 +316,62 @@ for (let category in categoryTotals) {
 
 
 
-const dateValue = document.getElementById("date").value;
-console.log(dateValue )
+function showToday() {
+
+
+    const today = new Date().toISOString().split("T")[0];
+
+
+    const filtered = transactions.filter(item => item.date === today);
+
+
+    renderFiltered(filtered);
+}
+
+
+function showMonth() {
+
+
+    const currentMonth = new Date().toISOString().slice(0,7);
+
+
+    const filtered = transactions.filter(item =>
+        item.date && item.date.slice(0,7) === currentMonth
+    );
+
+
+    renderFiltered(filtered);
+}
+
+
+
+
+function renderFiltered(filteredTransactions) {
+
+
+    const list = document.getElementById("list");
+    list.innerHTML = "";
+
+
+    filteredTransactions.forEach(function(item) {
+
+
+        const li = document.createElement("li");
+
+
+        li.textContent =
+        item.description +
+        " - ₹" + item.amount +
+        " (" + item.type + ")" +
+        " [" + item.category + "]" +
+        " 📅 " + item.date;
+
+
+        list.appendChild(li);
+    });
+}
+
+
 
 
 
@@ -340,6 +394,4 @@ window.onload = function() {
 
     renderTransactions();
 };
-
-
 
