@@ -1,3 +1,4 @@
+
 let balance = 0;
 let transactions = [];
 
@@ -136,15 +137,6 @@ if (categoryFilterValue !== "all") {
 
 
 
-transactions.forEach(function(item) {
-
-
-    console.log(
-        item.category,
-        item.amount
-    );
-console.log(500);
-});
 
 
     filteredTransactions.forEach(function(item) {
@@ -160,7 +152,8 @@ item.description +
 " 📅 " + (item.date || "No Date")
 
 
-console.log("ITEM =", item);
+
+
 
 
         const deleteBtn = document.createElement("button");
@@ -226,16 +219,8 @@ document.getElementById("income").textContent = incomeTotal;
 document.getElementById("expense").textContent = expenseTotal;
 
 
-const chartData = [
-    {
-        type: "Income",
-        amount: incomeTotal
-    },
-    {
-        type: "Expense",
-        amount: expenseTotal
-    }
-];
+
+
 
 
 let categoryTotals = {};
@@ -408,6 +393,5 @@ window.onload = function() {
 
     renderTransactions();
 };
-
 
 

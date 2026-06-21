@@ -12,8 +12,9 @@ body {
     background: #f4f4f4;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 
@@ -21,7 +22,7 @@ body {
 
 .container {
     background: white;
-    width: 650px;
+    width: 850px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -40,7 +41,8 @@ h1 {
 
 
 .input-box {
-    display: flex;
+    display:flex;
+     flex-wrap:wrap;
     gap: 10px;
     margin-bottom: 15px;
 }
@@ -119,6 +121,7 @@ ul li {
     font-weight: bold;
 }
 
+
 button {
     padding: 8px 12px;
     margin: 5px;
@@ -135,5 +138,120 @@ button {
 
 
 
+
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+
+@media (max-width: 768px) {
+
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+
+    .input-box {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    .input-box input,
+    .input-box button {
+        width: 100%;
+    }
+
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+
+    .box {
+        width: 100%;
+    }
+
+
+    select {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+
+    button {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+
+    h1 {
+        font-size: 26px;
+    }
+
+
+    h2 {
+        font-size: 22px;
+    }
+
+
+    h3 {
+        font-size: 18px;
+    }
+
+
+    ul li {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        word-break: break-word;
+    }
+
+
+    ul li button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+
+    .container {
+        width: 98%;
+        padding: 10px;
+    }
+
+
+    h1 {
+        font-size: 22px;
+    }
+
+
+    h2 {
+        font-size: 18px;
+    }
+
+
+    h3 {
+        font-size: 16px;
+    }
+
+
+    .box {
+        padding: 15px;
+    }
+
+
+    input,
+    select,
+    button {
+        font-size: 14px;
+    }
+}
 
 

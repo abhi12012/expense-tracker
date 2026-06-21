@@ -1,66 +1,113 @@
 
-Markdown
-
-* Category-wise transaction summary
-
 # Expense Tracker
 
-My first JavaScript project.
+A simple and practical Expense Tracker application built using HTML, CSS, and JavaScript.
 
-This is a simple Expense Tracker built using HTML, CSS and JavaScript.
+This project helps users manage their income and expenses, track transactions, and analyze spending patterns.
+
+---
 
 ## Features
 
+### Transaction Management
 * Add income transactions
 * Add expense transactions
-* View transaction list
 * Edit transactions
 * Delete transactions
-* Filter transactions by type (All, Income, Expense)
-* Transaction counter
+* View transaction history
+
+### Financial Summary
+* Automatic balance calculation
 * Income summary
 * Expense summary
-* Automatic balance calculation
-* Input validation
+* Transaction counter
+
+### Filtering System
+* Filter by transaction type:
+  * All
+  * Income
+  * Expense
+
+* Filter by date:
+  * Today
+  * This Month
+  * All Transactions
+
+### Category Management
+* Category-based transaction organization
+* Category Filter
+* Category Summary
+* View total transactions by category
+* Better expense analysis
+
+### Data Management
 * Data saved using Local Storage
 * Transactions remain after page refresh
-* Deleted transactions are removed from Local Storage
-* Prevents duplicate transaction descriptions
-* Category-based transaction organization
+* Deleted transactions removed from Local Storage
+* Prevent duplicate transaction descriptions
+* Input validation
 
-## New Update (19 June 2026)
 
-* Added transaction date selection feature
-* Added transaction filtering system
-* Added All Transactions filter
-* Added Income Transactions filter
-* Added Expense Transactions filter
-* Added Category Filter
-* Added Category Summary
-* Improved financial overview
-* Improved project functionality compared to previous version
-* Made the project more organized
-* Improved tracking experience
-* Enhanced overall project functionality
+---
 
+# Updates & Changelog
+
+## Version 1.2 - 19 June 2026
+
+Added:
+* Date selection feature
+* Today filter
+* This Month filter
+* All Transactions filter
+* Category Summary
+* Improved expense tracking system
+* Improved overall project functionality
+
+
+## Version 1.1
+
+Added:
+* Transaction filtering system
+* Category-based organization
+* Improved transaction management
+
+
+## Version 1.0
+
+Initial Release:
+* Basic income and expense tracking
+* Add and delete transactions
+* Local Storage support
+
+
+---
+
+# Technologies Used
 
 * HTML
 * CSS
 * JavaScript
 
-## Future Updates
+
+---
+
+# Future Updates
 
 * Dashboard
 * Charts & Analytics
 * Export CSV
+* Import Data
 * Search Transactions
 * Dark Mode
+* Backend Integration
+* User Authentication
 
-## Author
+
+---
+
+# Author
 
 Abhishek
-
-
 
 
 
