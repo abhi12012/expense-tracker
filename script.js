@@ -1,4 +1,3 @@
-
 let balance = 0;
 let transactions = [];
 
@@ -76,9 +75,7 @@ function renderTransactions() {
     const counterElement = document.getElementById("counter");
 
 
-    const chartArea = document.getElementById("chartArea");
-
-
+   
    
    
 
@@ -91,16 +88,7 @@ function renderTransactions() {
 
 
    
-    chartArea.innerHTML =
-`
-<h3>Chart Data</h3>
-<p>Income: ₹${incomeTotal}</p>
-<p>Expense: ₹${expenseTotal}</p>
-`;
-
-
-
-
+   
 
 
     list.innerHTML = "";
@@ -238,6 +226,69 @@ transactions.forEach(function(item) {
 
 
 });
+
+
+console.log(categoryTotals);
+
+
+
+
+const chartData = [];
+
+
+for (let category in categoryTotals) {
+
+
+    chartData.push({
+        category: category,
+        amount: categoryTotals[category]
+    });
+
+
+}
+
+
+console.log(chartData);
+
+
+const chartArea = document.getElementById("chartArea");
+
+
+chartArea.innerHTML = "<h3>Category Chart</h3>";
+
+
+chartData.forEach(function(item) {
+
+
+    chartArea.innerHTML += `
+        <div style="margin-bottom:10px;">
+            <p>${item.category}: ₹${item.amount}</p>
+
+
+            <div style="
+                background:#ddd;
+                height:20px;
+                width:300px;
+            ">
+                <div style="
+                    background:green;
+                    height:20px;
+                    width:${item.amount / 10}px;
+                "></div>
+            </div>
+        </div>
+    `;
+
+
+});
+
+
+
+
+
+
+
+
 
 
 const categoryFilter = document.getElementById("categoryFilter");
@@ -393,5 +444,4 @@ window.onload = function() {
 
     renderTransactions();
 };
-
 
