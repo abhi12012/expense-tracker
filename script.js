@@ -19,20 +19,34 @@ const categoryText = categoryInput.value;
     const amountValue = amountInput.value;
 
 
+
+
+    let dateValue = document.getElementById("date").value;
+
+
+if (!dateValue) {
+    dateValue = new Date().toISOString().split("T")[0];
+}
+
+
+
+
     if (descriptionText === "" || amountValue === "") {
         alert("Please fill all fields");
         return;
     }
 
 
-    transactions.push({
-    id: Date.now(),
-    description: descriptionText,
-    amount: Number(amountValue),
-    type: isExpense ? "expense" : "income",
-    category: categoryText,
-    date: dateValue
-});
+      transactions.push({
+        id: Date.now(),
+        description: descriptionText,
+        amount: Number(amountValue),
+        type: isExpense ? "expense" : "income",
+        category: categoryText,
+        date: dateValue || new Date().toISOString().split("T")[0]
+    });
+
+
     localStorage.setItem("transactions", JSON.stringify(transactions));
 
 
@@ -65,8 +79,6 @@ function renderTransactions() {
 
 
    
-
-
    
 
 
@@ -140,10 +152,15 @@ console.log(500);
 
        
         const li = document.createElement("li");
-        li.textContent = item.description +
-        " - ₹" + item.amount +
+        li.textContent =
+item.description +
+" - ₹" + item.amount +
 " (" + item.type + ")" +
-" [" + item.category + "]";
+" [" + item.category + "]" +
+" 📅 " + (item.date || "No Date")
+
+
+console.log("ITEM =", item);
 
 
         const deleteBtn = document.createElement("button");
@@ -323,4 +340,6 @@ window.onload = function() {
 
     renderTransactions();
 };
+
+
 
