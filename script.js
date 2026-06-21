@@ -76,7 +76,13 @@ function renderTransactions() {
 
 
    
-   
+    const searchValue =
+document.getElementById("searchInput")
+.value
+.toLowerCase();
+
+
+console.log(searchValue);
    
 
 
@@ -483,5 +489,4 @@ window.onload = function() {
 
     renderTransactions();
 };
-
 

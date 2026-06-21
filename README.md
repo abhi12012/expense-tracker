@@ -49,6 +49,14 @@ This project helps users manage their income and expenses, track transactions, a
 
 
 ---
+## Version 1.3 - 20 June 2026
+
+Added:
+* Search Transactions feature
+* Search transactions by description
+* Improved transaction finding system
+* Better user experience
+
 
 # Updates & Changelog
 
@@ -108,9 +116,4 @@ Initial Release:
 # Author
 
 Abhishek
-
-
-
-
-
 
