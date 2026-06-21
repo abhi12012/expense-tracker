@@ -397,6 +397,30 @@ for (let category in categoryTotals) {
 }
 
 
+
+
+let totalIncome = 0;
+let totalExpense = 0;
+
+
+transactions.forEach(function(item) {
+
+
+    if (item.type === "income") {
+        totalIncome += item.amount;
+    } else {
+        totalExpense += item.amount;
+    }
+
+
+});
+
+
+let savings = totalIncome - totalExpense;
+
+
+
+
 const analyticsArea =
 document.getElementById("analyticsArea");
 
@@ -896,4 +920,5 @@ function importCSV() {
 
 
 }
+
 
