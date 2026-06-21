@@ -1,5 +1,4 @@
 
-
 # Expense Tracker
 
 A simple and practical Expense Tracker application built using HTML, CSS, and JavaScript.
@@ -62,7 +61,22 @@ This project helps users manage their income and expenses, track transactions, e
 * Easy data backup and management
 
 
+### Analytics & Insights
+* Added expense analytics section
+* Shows highest spending category
+* Displays highest category amount
+* Provides better financial insights
+* Helps users understand spending patterns
+
 ---
+## Version 1.5
+
+Added:
+* Added Analytics section
+* Added highest category analysis
+* Added highest amount calculation
+* Improved spending insights
+* Enhanced financial tracking experience
 
 # Updates & Changelog
 
@@ -75,6 +89,12 @@ Added:
 * Added data backup functionality
 * Enhanced user experience
 
+   Added:
+* Amount sorting feature
+* Sort transactions from High to Low
+* Sort transactions from Low to High
+* Improved transaction analysis
+
 
 ## Version 1.3
 
@@ -85,6 +105,13 @@ Added:
 * Improved chart UI and presentation
 * Enhanced financial data visualization
 
+Added:
+* Search Transactions feature
+* Search transactions by description
+* Improved transaction finding system
+* Better user experience
+
+
 
 ## Version 1.2
 
@@ -94,6 +121,8 @@ Added:
 * Added This Month filter
 * Added All Transactions filter
 * Improved expense tracking system
+
+
 
 
 ## Version 1.1
@@ -132,6 +161,7 @@ Initial Release:
 * Dark Mode
 * Backend Integration
 * User Authentication
+
 
 
 ---

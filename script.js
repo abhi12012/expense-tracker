@@ -328,6 +328,10 @@ document.getElementById("expense").textContent = expenseTotal;
 
 
 
+
+
+
+
 let categoryTotals = {};
 
 
@@ -369,6 +373,39 @@ console.log(chartData);
 
 
 const chartArea = document.getElementById("chartArea");
+
+
+
+
+let highestCategory = "";
+let highestAmount = 0;
+
+
+for (let category in categoryTotals) {
+
+
+    if (categoryTotals[category] > highestAmount) {
+
+
+        highestAmount = categoryTotals[category];
+        highestCategory = category;
+
+
+    }
+
+
+}
+
+
+const analyticsArea =
+document.getElementById("analyticsArea");
+
+
+analyticsArea.innerHTML = `
+<h3>📊 Analytics</h3>
+<p>🏆 Highest Category: ${highestCategory}</p>
+<p>💰 Highest Amount: ₹${highestAmount}</p>
+`;
 
 
 chartArea.innerHTML = "<h3>Category Chart</h3>";
@@ -859,5 +896,4 @@ function importCSV() {
 
 
 }
-
 
