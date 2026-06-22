@@ -1,10 +1,13 @@
 
 ## Screenshot
 
-## Screenshot
+![Expense Tracker](screenshot.png)
+# Income & Expense Tracker
 
-![Expense Tracker Screenshot](screenshot.png)
 
+## Live Demo
+
+[View Expense Tracker](t https://abhi12012.github.io/expense-tracker/)
 A simple and practical Income & Expense Tracker application built using HTML, CSS, and JavaScript.
 
 This project helps users manage income and expenses, track transactions, monitor financial activity, backup and restore data, export and import records, and analyze spending patterns.
