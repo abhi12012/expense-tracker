@@ -1,5 +1,7 @@
 
+## Screenshot
 
+![Expense Tracker](screenshot.png)
 # Income & Expense Tracker
 
 A simple and practical Income & Expense Tracker application built using HTML, CSS, and JavaScript.
